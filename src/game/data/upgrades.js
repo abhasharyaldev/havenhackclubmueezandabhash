@@ -1,0 +1,86 @@
+export const UPGRADES = [
+  {
+    id: 'quickRecovery',
+    name: 'Quick Recovery',
+    max: 2,
+    cost: [8, 14],
+    desc: 'Attack recovery and hit stun are shorter.',
+    unlock: null,
+  },
+  {
+    id: 'afterimage',
+    name: 'Afterimage Dash',
+    max: 1,
+    cost: [10],
+    desc: 'Dash leaves afterimages and grants brief invulnerability.',
+    unlock: null,
+  },
+  {
+    id: 'counterPulse',
+    name: 'Counter Pulse',
+    max: 1,
+    cost: [12],
+    desc: 'A successful parry bursts damage around you.',
+    unlock: 'bug',
+  },
+  {
+    id: 'airReset',
+    name: 'Air Reset',
+    max: 1,
+    cost: [12],
+    desc: 'Defeating an enemy restores your air dash.',
+    unlock: null,
+  },
+  {
+    id: 'overclock',
+    name: 'Overclock',
+    max: 2,
+    cost: [8, 16],
+    desc: 'Run speed increases.',
+    unlock: null,
+  },
+  {
+    id: 'doubleDash',
+    name: 'Double Dash',
+    max: 1,
+    cost: [18],
+    desc: 'Dash twice before landing.',
+    unlock: 'deadline',
+  },
+  {
+    id: 'codeShield',
+    name: 'Code Shield',
+    max: 1,
+    cost: [14],
+    desc: 'Absorb the first hit of each life.',
+    unlock: 'bug',
+  },
+  {
+    id: 'airSlash',
+    name: 'Air Slash',
+    max: 1,
+    cost: [14],
+    desc: 'Air attacks fire a short energy wave.',
+    unlock: 'deadline',
+  },
+  {
+    id: 'matchaBurst',
+    name: 'Matcha Burst',
+    max: 1,
+    cost: [10],
+    desc: 'Press F to heal one heart. Refills at checkpoints.',
+    unlock: null,
+  },
+  {
+    id: 'compileStrike',
+    name: 'Compile Strike',
+    max: 2,
+    cost: [12, 20],
+    desc: 'Heavy attacks deal more damage.',
+    unlock: 'burnout',
+  },
+];
+
+export function upgradeById(id) {
+  return UPGRADES.find((u) => u.id === id);
+}
